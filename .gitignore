@@ -1,5 +1,4 @@
 /build/
-<<<<<<< HEAD
 /TontapatEAR/target/
 
 
@@ -48,10 +47,23 @@ buildNumber.properties
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-=======
 
 # Eclipse
 .classpath
 .project
 .settings/
->>>>>>> branch 'master' of https://github.com/valvenom/tontapat-j2ee
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Eclipse
+.classpath
+.project
+.settings/
