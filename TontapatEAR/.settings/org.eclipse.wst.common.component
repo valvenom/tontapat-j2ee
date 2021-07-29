@@ -74,6 +74,9 @@
         <dependent-module archiveName="TontapatBusiness-1.0.0.jar" deploy-path="/" handle="module:/resource/TontapatBusiness/TontapatBusiness">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="TontapatIDAO-1.0.0.jar" deploy-path="/lib" handle="module:/resource/TontapatIDAO/TontapatIDAO">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="TontapatWeb-1.0.0.war" deploy-path="/" handle="module:/resource/TontapatWeb/TontapatWeb">
             <dependency-type>uses</dependency-type>
         </dependent-module>

@@ -24,7 +24,7 @@
   	</dependency>
   	<dependency>
   		<groupId>${project.groupId}</groupId>
-  		<artifactId>TontapatIDao</artifactId>
+  		<artifactId>TontapatIDAO</artifactId>
   		<version>${project.version}</version>
   	</dependency>
   </dependencies>
