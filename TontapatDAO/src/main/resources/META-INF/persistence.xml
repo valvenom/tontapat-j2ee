@@ -9,7 +9,31 @@
 	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 	<jta-data-source>java:jboss/datasources/tontapat</jta-data-source>
 	
-		<!-- <class>fr.eql.ai109.appcat.jpa.entity.User</class> -->
+		<class>fr.eql.ai109.tontapat.entity.Annonce</class>
+		<class>fr.eql.ai109.tontapat.entity.ConditionAnnulation</class>
+		<class>fr.eql.ai109.tontapat.entity.Espece</class>
+		<class>fr.eql.ai109.tontapat.entity.Evaluation</class>
+		<class>fr.eql.ai109.tontapat.entity.Intervention</class>
+		<class>fr.eql.ai109.tontapat.entity.Morphologie</class>
+		<class>fr.eql.ai109.tontapat.entity.MotifAnnulation</class>
+		<class>fr.eql.ai109.tontapat.entity.MotifReclamation</class>
+		<class>fr.eql.ai109.tontapat.entity.MotifRefusReservation</class>
+		<class>fr.eql.ai109.tontapat.entity.Offre</class>
+		<class>fr.eql.ai109.tontapat.entity.Prestation</class>
+		<class>fr.eql.ai109.tontapat.entity.Proposition</class>
+		<class>fr.eql.ai109.tontapat.entity.Race</class>
+		<class>fr.eql.ai109.tontapat.entity.Reclamation</class>
+		<class>fr.eql.ai109.tontapat.entity.SeuilTarification</class>
+		<class>fr.eql.ai109.tontapat.entity.Terrain</class>
+		<class>fr.eql.ai109.tontapat.entity.Troupeau</class>
+		<class>fr.eql.ai109.tontapat.entity.TypeAbreuvoir</class>
+		<class>fr.eql.ai109.tontapat.entity.TypeAbri</class>
+		<class>fr.eql.ai109.tontapat.entity.TypeCloture</class>
+		<class>fr.eql.ai109.tontapat.entity.TypeIntervention</class>
+		<class>fr.eql.ai109.tontapat.entity.TypeUtilisateur</class>
+		<class>fr.eql.ai109.tontapat.entity.TypeVegetation</class>
+		<class>fr.eql.ai109.tontapat.entity.Utilisateur</class>
+
 
 		<properties>
 		

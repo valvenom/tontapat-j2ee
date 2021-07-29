@@ -1,0 +1,43 @@
+package fr.eql.ai109.tontapat.entity;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.Set;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
+
+@Table(name = "SeuilTarification")
+@Entity
+@Setter
+@Getter
+public class SeuilTarification implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false)
+	private int id;
+	@Column(name = "nom")
+	private String nom;
+	@Column(name = "prixKm")
+	private float prixKm;
+	@Column(name = "prixBeteJour")
+	private float prixBeteJour;
+	@Column(name = "coefIntervention")
+	private float coefIntervention;
+	@Column(name = "coefInstallation")
+	private float coefInstallation;
+
+}
