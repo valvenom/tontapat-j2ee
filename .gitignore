@@ -1,6 +1,11 @@
 /build/
+/TontapatBusiness/target/
+/TontapatDAO/target/
 /TontapatEAR/target/
-
+/TontapatEntity/target/
+/TontapatBusiness/target/
+/TontapatIDAO/target/
+/TontapatWeb/target/
 
 # JAVA
 target/
