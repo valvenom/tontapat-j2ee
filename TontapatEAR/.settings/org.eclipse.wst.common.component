@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="TontapatEAR-1.0.0">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="TontapatEntity-1.0.0.jar" deploy-path="/lib" handle="module:/resource/TontapatEntity/TontapatEntity">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="TontapatIDao-1.0.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/fr/eql/ai109/TontapatIDao/1.0.0/TontapatIDao-1.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="TontapatDao-1.0.0.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/fr/eql/ai109/TontapatDao/1.0.0/TontapatDao-1.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="TontapatIBusiness-1.0.0.jar" deploy-path="/lib" handle="module:/resource/TontapatIBusiness/TontapatIBusiness">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="TontapatBusiness-1.0.0.jar" deploy-path="/" handle="module:/resource/TontapatBusiness/TontapatBusiness">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="TontapatWeb-1.0.0.war" deploy-path="/" handle="module:/resource/TontapatWeb/TontapatWeb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
