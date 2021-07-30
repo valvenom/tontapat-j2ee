@@ -3,6 +3,7 @@
     <wb-module deploy-name="TontapatEntity">
                 
         <wb-resource deploy-path="/" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/java"/>
             
     </wb-module>
     
