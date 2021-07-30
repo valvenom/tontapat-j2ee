@@ -22,6 +22,27 @@ buildNumber.properties
 
 
 # ECLIPSE
+
+TontapatBusiness/.classpath
+TontapatDAO/.classpath
+TontapatEAR/.settings/org.eclipse.wst.common.component
+TontapatEntity/.classpath
+TontapatIBusiness/.classpath
+TontapatIDAO/.classpath
+TontapatWeb/.classpath
+TontapatWeb/.settings/org.eclipse.wst.common.component
+TontapatWeb/.settings/org.eclipse.wst.common.project.facet.core.xml
+Checkout conflict with files: 
+TontapatBusiness/.classpath
+TontapatDAO/.classpath
+TontapatEAR/.settings/org.eclipse.wst.common.component
+TontapatEntity/.classpath
+TontapatIBusiness/.classpath
+TontapatIDAO/.classpath
+TontapatWeb/.classpath
+TontapatWeb/.settings/org.eclipse.wst.common.component
+TontapatWeb/.settings/org.eclipse.wst.common.project.facet.core.xml
+
 .classpath
 .project
 .settings/
