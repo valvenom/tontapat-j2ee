@@ -17,7 +17,7 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Table(name = "Utilisateur")
+@Table(name = "utilisateur")
 @Entity
 @Setter
 @Getter
@@ -27,49 +27,61 @@ public class Utilisateur implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", nullable = false)
+	@Column(name = "id_utilisateur", nullable = false)
 	private int id;
 	@Column(name = "email")
 	private String email;
-	@Column(name = "motDePasse")
+	@Column(name = "mot_de_passe")
 	private String motDePasse;
-	@Column(name = "dateNaissance")
-	private java.util.Date dateNaissance;
-	@Column(name = "dateInscription")
-	private java.util.Date dateInscription;
-	@Column(name = "photoProfil")
+	@Column(name = "date_naissance")
+	private Date dateNaissance;
+	@Column(name = "date_inscription")
+	private Date dateInscription;
+	@Column(name = "photo_profil")
 	private String photoProfil;
 	@Column(name = "nom")
 	private String nom;
 	@Column(name = "prenom")
 	private String prenom;
-	@Column(name = "raisonSociale")
+	@Column(name = "raison_sociale")
 	private String raisonSociale;
-	@Column(name = "adresseVoie")
+	@Column(name = "adresse_voie")
 	private String adresseVoie;
-	@Column(name = "adresseLong")
+	@Column(name = "adresse_long")
 	private float adresseLong;
-	@Column(name = "adresseLat")
+	@Column(name = "adresse_lat")
 	private float adresseLat;
-	@Column(name = "carteNumero")
+	@Column(name = "carte_numero")
 	private String carteNumero;
-	@Column(name = "carteExpiration")
-	private java.util.Date carteExpiration;
-	@Column(name = "carteCVC")
+	@Column(name = "carte_expiration")
+	private Date carteExpiration;
+	@Column(name = "carte_cvc")
 	private String carteCVC;
-	@Column(name = "virementIBAN")
+	@Column(name = "virement_iban")
 	private String virementIBAN;
-	@Column(name = "virementBIC")
+	@Column(name = "virement_bic")
 	private String virementBIC;
-	@Column(name = "paypalEmail")
+	@Column(name = "paypal_email")
 	private String paypalEmail;
-	@Column(name = "dateDesactivation")
-	private java.util.Date dateDesactivation;
-	@Column(name = "dateModification")
-	private java.util.Date dateModification;
-	@Column(name = "textePresentation")
+	@Column(name = "date_desactivation")
+	private Date dateDesactivation;
+	@Column(name = "date_modification")
+	private Date dateModification;
+	@Column(name = "texte_presentation")
 	private String textePresentation;
-	@Column(name = "numeroTelephone")
+	@Column(name = "numero_telephone")
 	private String numeroTelephone;
-
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_type_utilisateur")
+	private TypeUtilisateur typeUtilisateur;
+	@OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<Terrain> terrains;
+	@OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<Troupeau> troupeaux;
+	@OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<Proposition> propositions;
+	@OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<Evaluation> evaluations;
+	@OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<Reclamation> reclamations;
 }

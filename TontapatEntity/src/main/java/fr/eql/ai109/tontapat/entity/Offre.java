@@ -17,7 +17,7 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Table(name = "Offre")
+@Table(name = "offre")
 @Entity
 @Setter
 @Getter
@@ -27,33 +27,40 @@ public class Offre implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", nullable = false)
+	@Column(name = "id_offre", nullable = false)
 	private int id;
 	@Column(name = "nom")
 	private String nom;
-	@Column(name = "dateAjout")
-	private java.util.Date dateAjout;
-	@Column(name = "dateDebut")
-	private java.util.Date dateDebut;
-	@Column(name = "dateFin")
-	private java.util.Date dateFin;
+	@Column(name = "date_ajout")
+	private Date dateAjout;
+	@Column(name = "date_debut")
+	private Date dateDebut;
+	@Column(name = "date_fin")
+	private Date dateFin;
 	@Column(name = "description")
 	private String description;
-	@Column(name = "installationAssuree")
+	@Column(name = "installation_assuree")
 	private boolean installationAssuree;
-	@Column(name = "prixKm")
+	@Column(name = "prix_km")
 	private float prixKm;
-	@Column(name = "prixInstallation")
+	@Column(name = "prix_installation")
 	private float prixInstallation;
-	@Column(name = "prixIntervention")
+	@Column(name = "prix_intervention")
 	private float prixIntervention;
-	@Column(name = "prixBeteJour")
+	@Column(name = "prix_bete_jour")
 	private float prixBeteJour;
-	@Column(name = "zoneCouverture")
+	@Column(name = "zone_couverture")
 	private int zoneCouverture;
-	@Column(name = "dateRetrait")
-	private java.util.Date dateRetrait;
-	@Column(name = "frequenceIntervention")
+	@Column(name = "date_retrait")
+	private Date dateRetrait;
+	@Column(name = "frequence_intervention")
 	private int frequenceIntervention;
-
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_troupeau")
+	private Troupeau troupeau;
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_condition_annulation")
+	private ConditionAnnulation conditionAnnulation;
+	@OneToMany(mappedBy = "offre", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<Prestation> prestations;
 }

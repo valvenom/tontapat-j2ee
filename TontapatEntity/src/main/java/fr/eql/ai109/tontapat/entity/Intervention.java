@@ -2,22 +2,18 @@ package fr.eql.ai109.tontapat.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Table(name = "Intervention")
+@Table(name = "intervention")
 @Entity
 @Setter
 @Getter
@@ -27,15 +23,21 @@ public class Intervention implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", nullable = false)
+	@Column(name = "id_intervention", nullable = false)
 	private int id;
 	@Column(name = "descriptif")
 	private String descriptif;
-	@Column(name = "dateDemande")
-	private java.util.Date dateDemande;
-	@Column(name = "dateValidation")
-	private java.util.Date dateValidation;
-	@Column(name = "dateIntervention")
-	private java.util.Date dateIntervention;
-
+	@Column(name = "date_demande")
+	private Date dateDemande;
+	@Column(name = "date_validation")
+	private Date dateValidation;
+	@Column(name = "date_intervention")
+	private Date dateIntervention;
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_prestation")
+	private Prestation prestation;
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_type_intervention")
+	private TypeIntervention typeIntervention;
+	
 }

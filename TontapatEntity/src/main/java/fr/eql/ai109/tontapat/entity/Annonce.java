@@ -17,7 +17,7 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Table(name = "Annonce")
+@Table(name = "annonce")
 @Entity
 @Setter
 @Getter
@@ -27,21 +27,28 @@ public class Annonce implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", nullable = false)
+	@Column(name = "id_annonce", nullable = false)
 	private int id;
 	@Column(name = "nom")
 	private String nom;
-	@Column(name = "dateAjout")
+	@Column(name = "date_ajout")
 	private Date dateAjout;
-	@Column(name = "dateDebut")
+	@Column(name = "date_debut")
 	private Date dateDebut;
-	@Column(name = "dateFin")
+	@Column(name = "date_fin")
 	private Date dateFin;
 	@Column(name = "description")
 	private String description;
-	@Column(name = "installationAssuree")
+	@Column(name = "installation_assuree")
 	private boolean installationAssuree;
-	@Column(name = "dateRetrait")
+	@Column(name = "date_retrait")
 	private Date dateRetrait;
-
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_terrain")
+	private Terrain terrain;
+	@OneToMany(mappedBy = "annonce", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<Prestation> prestations;
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_prestation")
+	private Prestation prestation;
 }

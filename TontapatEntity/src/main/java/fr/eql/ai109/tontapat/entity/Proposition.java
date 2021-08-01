@@ -2,22 +2,18 @@ package fr.eql.ai109.tontapat.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Table(name = "Proposition")
+@Table(name = "proposition")
 @Entity
 @Setter
 @Getter
@@ -27,25 +23,34 @@ public class Proposition implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", nullable = false)
+	@Column(name = "id_proposition", nullable = false)
 	private int id;
-	@Column(name = "dateCreation")
-	private java.util.Date dateCreation;
-	@Column(name = "dateAnnulation")
-	private java.util.Date dateAnnulation;
-	@Column(name = "dateValidation")
-	private java.util.Date dateValidation;
-	@Column(name = "dateRefus")
-	private java.util.Date dateRefus;
+	@Column(name = "date_creation")
+	private Date dateCreation;
+	@Column(name = "date_annulation")
+	private Date dateAnnulation;
+	@Column(name = "date_validation")
+	private Date dateValidation;
+	@Column(name = "date_refus")
+	private Date dateRefus;
 	@Column(name = "description")
 	private String description;
-	@Column(name = "dateDebutPrestation")
-	private java.util.Date dateDebutPrestation;
-	@Column(name = "dateFinPrestation")
-	private java.util.Date dateFinPrestation;
-	@Column(name = "prixPropose")
+	@Column(name = "date_debut_prestation")
+	private Date dateDebutPrestation;
+	@Column(name = "date_fin_prestation")
+	private Date dateFinPrestation;
+	@Column(name = "prix_propose")
 	private float prixPropose;
-	@Column(name = "typeInstallation")
+	@Column(name = "type_installation")
 	private boolean typeInstallation;
-
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_utilisateur")
+	private Utilisateur utilisateur;
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_prestation")
+	private Prestation prestation;
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_troupeau")
+	private Troupeau troupeau;
+	
 }

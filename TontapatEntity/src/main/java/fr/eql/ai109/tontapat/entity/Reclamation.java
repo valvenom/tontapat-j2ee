@@ -2,22 +2,18 @@ package fr.eql.ai109.tontapat.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Table(name = "Reclamation")
+@Table(name = "reclamation")
 @Entity
 @Setter
 @Getter
@@ -27,13 +23,22 @@ public class Reclamation implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", nullable = false)
+	@Column(name = "id_reclamation", nullable = false)
 	private int id;
-	@Column(name = "dateAjout")
-	private java.util.Date dateAjout;
-	@Column(name = "dateTraitement")
-	private java.util.Date dateTraitement;
+	@Column(name = "date_ajout")
+	private Date dateAjout;
+	@Column(name = "date_traitement")
+	private Date dateTraitement;
 	@Column(name = "descriptif")
 	private String descriptif;
-
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_prestation")
+	private Prestation prestation;
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_utilisateur")
+	private Utilisateur utilisateur;
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_motif_reclamation")
+	private MotifReclamation motifReclamation;
+	
 }

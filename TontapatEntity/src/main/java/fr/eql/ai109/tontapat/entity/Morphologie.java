@@ -1,23 +1,18 @@
 package fr.eql.ai109.tontapat.entity;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.Set;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Table(name = "Morphologie")
+@Table(name = "morphologie")
 @Entity
 @Setter
 @Getter
@@ -27,9 +22,12 @@ public class Morphologie implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", nullable = false)
+	@Column(name = "id_morphologie", nullable = false)
 	private int id;
 	@Column(name = "nom")
 	private String nom;
-
+	@ManyToMany
+	Set<Terrain> terrains;
+	@ManyToMany
+	Set<Espece> especes;
 }
