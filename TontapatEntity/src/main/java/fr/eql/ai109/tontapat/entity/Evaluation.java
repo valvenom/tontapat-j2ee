@@ -29,6 +29,9 @@ public class Evaluation implements Serializable {
 	@Column(name = "commentaire")
 	private String commentaire;
 	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_prestation")
+	private Prestation prestation;
+	@ManyToOne
 	@JoinColumn(referencedColumnName = "id_utilisateur")
 	private Utilisateur utilisateurSource;
 	@ManyToOne

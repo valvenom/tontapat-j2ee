@@ -80,8 +80,10 @@ public class Utilisateur implements Serializable {
 	private Set<Troupeau> troupeaux;
 	@OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Set<Proposition> propositions;
-	@OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private Set<Evaluation> evaluations;
+	@OneToMany(mappedBy = "utilisateurSource", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<Evaluation> evaluationsFaites;
+	@OneToMany(mappedBy = "utilisateurCible", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<Evaluation> evaluationsRecues;
 	@OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Set<Reclamation> reclamations;
 }

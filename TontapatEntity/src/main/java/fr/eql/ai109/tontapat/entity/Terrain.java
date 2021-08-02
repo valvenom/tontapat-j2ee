@@ -47,6 +47,10 @@ public class Terrain implements Serializable {
 	private String adresseVoie;
 	@Column(name = "date_retrait")
 	private Date dateRetrait;
+	@OneToMany(mappedBy = "terrain", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<Annonce> annonces;
+	@OneToMany(mappedBy = "terrain", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<Prestation> prestations;
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "id_utilisateur")
 	private Utilisateur utilisateur;
@@ -80,9 +84,4 @@ public class Terrain implements Serializable {
 			joinColumns = @JoinColumn(name = "id_terrain"),
 			inverseJoinColumns = @JoinColumn(name = "id_type_abreuvoir"))
 	Set<TypeAbreuvoir> typesAbreuvoir;
-	@OneToMany(mappedBy = "annonce", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private Set<Annonce> annonces;
-	@OneToMany(mappedBy = "prestation", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private Set<Prestation> prestations;
-	
 }

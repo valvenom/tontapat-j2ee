@@ -32,8 +32,8 @@ public class ConditionAnnulation implements Serializable {
 	private int delaiJours;
 	@Column(name = "pourcentage_facturation")
 	private float pourcentageFacturation;
-	@OneToMany(mappedBy = "condition_annulation", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "conditionAnnulation", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Set<Offre> offres;
-	@OneToMany(mappedBy = "condition_annulation", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "conditionAnnulation", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Set<Prestation> prestations;
 }

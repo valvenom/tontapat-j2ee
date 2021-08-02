@@ -85,6 +85,9 @@ public class Prestation implements Serializable {
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "id_condition_annulation")
 	private ConditionAnnulation conditionAnnulation;
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_motif_reclamation")
+	private MotifReclamation motifReclamation;
 	@OneToMany(mappedBy = "prestation", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Set<Proposition> propositions;
 	@OneToMany(mappedBy = "prestation", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

@@ -28,6 +28,6 @@ public class TypeIntervention implements Serializable {
 	private int id;
 	@Column(name = "nom")
 	private String nom;
-	@OneToMany(mappedBy = "type_intervention", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private Set<Prestation> prestations;
+	@OneToMany(mappedBy = "typeIntervention", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<Intervention> interventions;
 }

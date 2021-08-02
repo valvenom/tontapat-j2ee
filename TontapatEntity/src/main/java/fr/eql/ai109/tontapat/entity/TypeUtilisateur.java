@@ -28,6 +28,6 @@ public class TypeUtilisateur implements Serializable {
 	private int id;
 	@Column(name = "nom")
 	private String nom;
-	@OneToMany(mappedBy = "type_utilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "typeUtilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Set<Utilisateur> utilisateurs;
 }

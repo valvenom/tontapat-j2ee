@@ -28,6 +28,6 @@ public class MotifReclamation implements Serializable {
 	private int id;
 	@Column(name = "nom")
 	private String nom;
-	@OneToMany(mappedBy = "motif_reclamation", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "motifReclamation", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Set<Prestation> prestations;
 }
