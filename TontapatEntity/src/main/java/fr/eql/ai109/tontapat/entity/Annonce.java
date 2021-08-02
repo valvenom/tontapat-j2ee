@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -46,9 +47,7 @@ public class Annonce implements Serializable {
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "id_terrain")
 	private Terrain terrain;
-	@OneToMany(mappedBy = "annonce", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private Set<Prestation> prestations;
-	@ManyToOne
-	@JoinColumn(referencedColumnName = "id_prestation")
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_prestation", referencedColumnName = "id_prestation")
 	private Prestation prestation;
 }
