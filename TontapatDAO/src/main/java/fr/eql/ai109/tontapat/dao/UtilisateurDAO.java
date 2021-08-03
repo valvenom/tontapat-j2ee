@@ -27,7 +27,7 @@ public class UtilisateurDAO extends GenericDAO<Utilisateur> implements Utilisate
 			em = new EntityManagerHolder().getCurrentEntityManager();
 			
 			Query query = em.createQuery("SELECT u FROM User u WHERE u.email=:emailParam");
-			query.setParameter("emailParam", utilisateur.getEmail());
+			//query.setParameter("emailParam", utilisateur.getEmail());
 			System.out.println(query);
 			users = query.getResultList();
 			
