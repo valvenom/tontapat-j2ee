@@ -27,12 +27,6 @@ INSERT INTO `utilisateur` (adresse_lat, adresse_long , adresse_voie, carte_cvc, 
 INSERT INTO `utilisateur` (adresse_lat, adresse_long , adresse_voie, carte_cvc, carte_expiration, carte_numero, date_inscription, date_naissance, email, mot_de_passe, nom, numero_telephone, paypal_email, prenom, raison_sociale, texte_presentation, virement_bic, virement_iban, typeUtilisateur_id_type_utilisateur) VALUES ('48.83832616391294','3.0957737626953286', 'Ferme du Charnoy', '154', '2024-03-25','8757286876786448','2021-07-05','1982-01-21','marie.levasseur@gmail.fr','secret','Levasseur','0354285417','marie.levasseur@gmail.fr','Marie','particulier/propiétaire terrain','la plus belle ferme','FIEZJFIZEJFUCE','FR975785781679619785987','1');
 INSERT INTO `utilisateur` (adresse_lat, adresse_long , adresse_voie, carte_cvc, carte_expiration, carte_numero, date_inscription, date_naissance, email, mot_de_passe, nom, numero_telephone, paypal_email, prenom, raison_sociale, texte_presentation, virement_bic, virement_iban, typeUtilisateur_id_type_utilisateur) VALUES ('48.74197033276085','3.1297627153320473', '18 Rue de la Chapelle', '526', '2023-01-12','7613175751875478','2021-07-28','1986-07-02','nathalie.renouie@gmail.fr','cadeau','Renouie','0379679584','nathalie.renouie@gmail.fr','Nathalie','Zone verte eco+','espaces vert en besoin !','ZOIEJGEZIDHUEZ','FR73287827846287795452','3');
 
-INSERT INTO `type_vegetation` (nom) VALUES ('Renouée du japon');
-INSERT INTO `type_vegetation` (nom) VALUES ('Ailante');
-INSERT INTO `type_vegetation` (nom) VALUES ('Aster américain');
-INSERT INTO `type_vegetation` (nom) VALUES ('Robinier');
-INSERT INTO `type_vegetation` (nom) VALUES ('Ambroisie');
-INSERT INTO `type_vegetation` (nom) VALUES ('Buddléia');
 INSERT INTO `type_vegetation` (nom) VALUES ('Herbacée');
 INSERT INTO `type_vegetation` (nom) VALUES ('Arbustive');
 INSERT INTO `type_vegetation` (nom) VALUES ('Arborée');
@@ -94,5 +88,75 @@ INSERT INTO `offre` (date_ajout, date_debut, date_fin, description, frequence_in
 
 INSERT INTO `prestation` (date_apport_troupeau, date_debut, date_debut_desinstallation,date_debut_installation, date_fin, date_fin_desinstallation, date_fin_installation,date_recuperation_troupeau, date_reservation, date_validation, frequence_intervention,num_reservation, prix_convenu, type_installation, conditionAnnulation_id_condition_annulation, offre_id_offre, terrain_id_terrain, troupeau_id_troupeau) VALUES ('2021-07-05', '2021-06-30', '2021-08-30', '2021-06-30','2021-09-05','2021-09-02', '2021-07-02', '2021-08-25','2021-06-20','2021-06-21','2','858487','8500',true,'1','1','1','1');
 
+INSERT INTO `morphologie` (nom) VALUES ('pentes');
+INSERT INTO `morphologie` (nom) VALUES ('vallonnements');
+INSERT INTO `morphologie` (nom) VALUES ('lignes de crêtes');
+INSERT INTO `morphologie` (nom) VALUES ('plat');
 
+
+INSERT INTO `espece_morphologie` (id_espece, id_morphologie) VALUES ('1','2');
+INSERT INTO `espece_morphologie` (id_espece, id_morphologie) VALUES ('1','4');
+INSERT INTO `espece_morphologie` (id_espece, id_morphologie) VALUES ('2','4');
+INSERT INTO `espece_morphologie` (id_espece, id_morphologie) VALUES ('2','4');
+INSERT INTO `espece_morphologie` (id_espece, id_morphologie) VALUES ('3','1');
+INSERT INTO `espece_morphologie` (id_espece, id_morphologie) VALUES ('3','2');
+INSERT INTO `espece_morphologie` (id_espece, id_morphologie) VALUES ('3','4');
+INSERT INTO `espece_morphologie` (id_espece, id_morphologie) VALUES ('1','1');
+INSERT INTO `espece_morphologie` (id_espece, id_morphologie) VALUES ('4','1');
+INSERT INTO `espece_morphologie` (id_espece, id_morphologie) VALUES ('4','2');
+INSERT INTO `espece_morphologie` (id_espece, id_morphologie) VALUES ('4','3');
+INSERT INTO `espece_morphologie` (id_espece, id_morphologie) VALUES ('4','4');
+
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('1','1');
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('1','2');
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('1','3');
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('1','4');
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('2','1');
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('2','2');
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('2','4');
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('3','1');
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('3','4');
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('3','5');
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('4','1');
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('4','2');
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('4','4');
+INSERT INTO `espece_type_vegetation` (id_espece, id_type_vegetation) VALUES ('4','5');
+
+INSERT INTO `terrain_morphologie` (id_terrain, id_morphologie) VALUES ('1','1');
+INSERT INTO `terrain_morphologie` (id_terrain, id_morphologie) VALUES ('1','2');
+INSERT INTO `terrain_morphologie` (id_terrain, id_morphologie) VALUES ('1','3');
+INSERT INTO `terrain_morphologie` (id_terrain, id_morphologie) VALUES ('1','4');
+INSERT INTO `terrain_morphologie` (id_terrain, id_morphologie) VALUES ('2','1');
+INSERT INTO `terrain_morphologie` (id_terrain, id_morphologie) VALUES ('2','2');
+INSERT INTO `terrain_morphologie` (id_terrain, id_morphologie) VALUES ('2','3');
+INSERT INTO `terrain_morphologie` (id_terrain, id_morphologie) VALUES ('2','4');
+INSERT INTO `terrain_morphologie` (id_terrain, id_morphologie) VALUES ('3','1');
+INSERT INTO `terrain_morphologie` (id_terrain, id_morphologie) VALUES ('3','2');
+INSERT INTO `terrain_morphologie` (id_terrain, id_morphologie) VALUES ('3','3');
+INSERT INTO `terrain_morphologie` (id_terrain, id_morphologie) VALUES ('3','4');
+
+INSERT INTO `motif_refus_reservation` (nom) VALUES ('mauvaise note');
+INSERT INTO `motif_refus_reservation` (nom) VALUES ('terrain/troupeau inadapté');
+
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('1','1');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('1','2');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('1','3');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('1','4');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('1','5');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('2','1');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('2','2');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('2','3');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('2','4');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('2','5');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('3','1');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('3','2');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('3','3');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('3','4');
+INSERT INTO `terrain_type_vegetation` (id_terrain, id_type_vegetation) VALUES ('3','5');
+
+INSERT INTO `terrain_type_abreuvoir` (id_terrain, id_type_abreuvoir) VALUES ('1','1');
+
+INSERT INTO `terrain_type_cloture` (id_terrain, id_type_cloture) VALUES ('1','4');
+
+INSERT INTO `terrain_type_abri` (id_terrain, id_type_abri) VALUES ('1','4');
 
