@@ -2,7 +2,6 @@ package fr.eql.ai109.tontapat.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -49,6 +48,6 @@ public class Annonce implements Serializable {
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "id_terrain")
 	private Terrain terrain;
-	@OneToOne(mappedBy = "prestation")
+	@OneToOne(mappedBy = "annonce")
 	private Annonce annonce;
 }
