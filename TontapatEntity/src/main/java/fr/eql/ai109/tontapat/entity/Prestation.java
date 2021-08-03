@@ -78,8 +78,9 @@ public class Prestation implements Serializable {
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "id_offre")
 	private Offre offre;
-	@OneToOne(mappedBy = "prestation")
-	private Annonce annonce;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_prestation", referencedColumnName = "id_prestation")
+	private Prestation prestation;
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "id_motif_refus")
 	private MotifRefusReservation motifRefusReservation;
