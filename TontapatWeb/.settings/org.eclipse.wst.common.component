@@ -1,39 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+<<<<<<< HEAD
                                         
     
     
     
     
+=======
+                        
+>>>>>>> refs/heads/dev-val
     
     
     
     
     <wb-module deploy-name="TontapatWeb-1.0.0">
+<<<<<<< HEAD
                                                                                 
         
         
         
         
+=======
+                                                
+>>>>>>> refs/heads/dev-val
         
         
         
         
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+<<<<<<< HEAD
                                                                                 
         
         
         
         
+=======
+                                                
+>>>>>>> refs/heads/dev-val
         
         
         
         
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+<<<<<<< HEAD
                                                                                 
         
         
         
         
+=======
+                                                
+>>>>>>> refs/heads/dev-val
         
         
         
@@ -41,32 +57,45 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
                 
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+<<<<<<< HEAD
                                                                         
         
         
         
         
+=======
+                                        
+>>>>>>> refs/heads/dev-val
         
         
         
         <dependent-module archiveName="TontapatEntity-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/TontapatEntity/TontapatEntity">
+<<<<<<< HEAD
                                                                                                             
             
             
             
             
+=======
+                                                            
+>>>>>>> refs/heads/dev-val
             
             
             
             <dependency-type>uses</dependency-type>
+<<<<<<< HEAD
                                                                                                         
         
         
         
         
         
+=======
+                                                        
+>>>>>>> refs/heads/dev-val
         
         
+<<<<<<< HEAD
         </dependent-module>
                                                                         
         
@@ -93,6 +122,8 @@
         
         
         
+=======
+>>>>>>> refs/heads/dev-val
         
         </dependent-module>
                                                                                 
@@ -104,32 +135,60 @@
         
         
         
+        <dependent-module archiveName="TontapatIBusiness-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/TontapatIBusiness/TontapatIBusiness">
+                                                            
+            
+            
+            
+            <dependency-type>uses</dependency-type>
+                                                        
+        
+        
+        
+        </dependent-module>
+                                                
+        
+        
+        
+        
         <property name="context-root" value="TontapatWeb"/>
+<<<<<<< HEAD
                                                                                 
         
         
         
         
+=======
+                                                
+>>>>>>> refs/heads/dev-val
         
         
         
         
         <property name="java-output-path" value="/TontapatWeb/target/classes"/>
+<<<<<<< HEAD
                                                                             
     
     
     
     
+=======
+                                            
+>>>>>>> refs/heads/dev-val
     
     
     
     
     </wb-module>
+<<<<<<< HEAD
                                     
 
 
 
 
+=======
+                    
+>>>>>>> refs/heads/dev-val
 
 
 
