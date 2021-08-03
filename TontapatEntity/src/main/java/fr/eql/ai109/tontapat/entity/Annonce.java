@@ -49,5 +49,5 @@ public class Annonce implements Serializable {
 	@JoinColumn(referencedColumnName = "id_terrain")
 	private Terrain terrain;
 	@OneToOne(mappedBy = "annonce")
-	private Annonce annonce;
+	private Prestation prestation;
 }

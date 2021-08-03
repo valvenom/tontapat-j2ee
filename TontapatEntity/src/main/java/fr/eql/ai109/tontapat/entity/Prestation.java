@@ -80,7 +80,7 @@ public class Prestation implements Serializable {
 	private Offre offre;
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_annonce", referencedColumnName = "id_annonce")
-	private Prestation prestation;
+	private Annonce annonce;
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "id_motif_refus")
 	private MotifRefusReservation motifRefusReservation;
