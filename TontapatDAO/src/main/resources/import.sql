@@ -84,6 +84,15 @@ INSERT INTO `motif_reclamation` (nom) VALUES ('mauvais traitement des animaux');
 INSERT INTO `motif_reclamation` (nom) VALUES ('non conformité du terrain');
 INSERT INTO `motif_reclamation` (nom) VALUES ('non respect des actions de suivie');
 
-INSERT INTO `annonce` (nom) VALUES ('non respect des actions de suivie');
+INSERT INTO `annonce` (date_ajout, date_debut, date_fin, description, installation_assuree, nom, terrain_id_terrain) VALUES ('2021-06-15', '2021-06-15', '2021-08-15', 'je recherche un troupeau pour une tonte de 2 mois', false,'annonce pour les vertes collines', '1');
+INSERT INTO `annonce` (date_ajout, date_debut, date_fin, description, installation_assuree, nom, terrain_id_terrain) VALUES ('2021-07-06', '2021-07-06', '2021-12-06', 'je recherche un troupeau pour une tonte de 5 mois', false,'annonce pour la jungle', '2');
+INSERT INTO `annonce` (date_ajout, date_debut, date_fin, description, installation_assuree, nom, terrain_id_terrain) VALUES ('2021-07-29', '2021-07-29', '2021-10-29', 'je recherche un troupeau pour une tonte de 3 mois', true,'annonce pour la prairie chatoyante', '3');
+
+INSERT INTO `offre` (date_ajout, date_debut, date_fin, description, frequence_intervention, installation_assuree, nom, prix_bete_jour, prix_installation, prix_intervention, prix_km, zone_couverture,conditionAnnulation_id_condition_annulation, troupeau_id_troupeau) VALUES ('2021-04-04', '2021-04-04', '2021-10-29', 'je recherche un terrain pour mon troupeau','2', true,'offre pour les chèvre Attila','50','1000','20','12','200','1', '1');
+INSERT INTO `offre` (date_ajout, date_debut, date_fin, description, frequence_intervention, installation_assuree, nom, prix_bete_jour, prix_installation, prix_intervention, prix_km, zone_couverture,conditionAnnulation_id_condition_annulation, troupeau_id_troupeau) VALUES ('2021-04-08', '2021-04-08', '2021-06-10', 'je recherche un terrain pour mon troupeau','2', true,'offre pour les faiseuses de désert','40','800','20','12','200','1', '2');
+INSERT INTO `offre` (date_ajout, date_debut, date_fin, description, frequence_intervention, installation_assuree, nom, prix_bete_jour, prix_installation, prix_intervention, prix_km, zone_couverture,conditionAnnulation_id_condition_annulation, troupeau_id_troupeau) VALUES ('2021-05-30', '2021-05-30', '2021-05-30', 'je recherche un terrain pour mon troupeau','3', false,'offre pour les vaches ninjas','75','1500','30','18','300','1', '3');
+
+INSERT INTO `prestation` (date_apport_troupeau, date_debut, date_debut_desinstallation,date_debut_installation, date_fin, date_fin_desinstallation, date_fin_installation,date_recuperation_troupeau, date_reservation, date_validation, frequence_intervention,num_reservation, prix_convenu, type_installation, conditionAnnulation_id_condition_annulation, offre_id_offre, terrain_id_terrain, troupeau_id_troupeau) VALUES ('2021-07-05', '2021-06-30', '2021-08-30', '2021-06-30','2021-09-05','2021-09-02', '2021-07-02', '2021-08-25','2021-06-20','2021-06-21','2','858487','8500',true,'1','1','1','1');
+
 
 
