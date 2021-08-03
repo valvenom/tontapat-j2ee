@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -24,15 +25,15 @@ import lombok.Setter;
 public class Morphologie implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_morphologie", nullable = false)
 	private int id;
 	@Column(name = "nom")
 	private String nom;
-	@ManyToMany
+	@OneToMany(mappedBy = "morphologies")
 	Set<Terrain> terrains;
-	@ManyToMany
+	@ManyToMany(mappedBy = "especes")
 	Set<Espece> especes;
 }

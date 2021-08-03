@@ -31,8 +31,8 @@ public class TypeVegetation implements Serializable {
 	private int id;
 	@Column(name = "nom")
 	private String nom;
-	@ManyToMany
+	@ManyToMany(mappedBy = "typesVegetation")
 	Set<Terrain> terrains;
-	@ManyToMany
+	@ManyToMany(mappedBy = "typesVegetation")
 	Set<Espece> especes;
 }

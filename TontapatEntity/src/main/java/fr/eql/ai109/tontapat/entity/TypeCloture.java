@@ -31,6 +31,6 @@ public class TypeCloture implements Serializable {
 	private int id;
 	@Column(name = "nom")
 	private String nom;
-	@ManyToMany
+	@ManyToMany(mappedBy = "typesCloture")
 	private Set<Terrain> terrains;
 }

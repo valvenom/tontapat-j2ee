@@ -31,6 +31,6 @@ public class TypeAbri implements Serializable {
 	private int id;
 	@Column(name = "nom")
 	private String nom;
-	@ManyToMany
+	@ManyToMany(mappedBy = "typesAbri")
 	private Set<Terrain> terrains;
 }

@@ -41,13 +41,13 @@ public class Espece implements Serializable {
 			name = "espece_type_vegetation",
 			joinColumns = @JoinColumn(name = "id_espece"),
 			inverseJoinColumns = @JoinColumn(name = "id_type_vegetation"))
-	Set<TypeVegetation> typeVegetations;
+	Set<TypeVegetation> typesVegetation;
 	@ManyToMany
 	@JoinTable(
 			name = "espece_morphologie",
 			joinColumns = @JoinColumn(name = "id_espece"),
 			inverseJoinColumns = @JoinColumn(name = "id_morphologie"))
-	Set<Morphologie> morphologie;
+	Set<Morphologie> morphologies;
 	@OneToMany(mappedBy = "espece", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Set<Race> races;
 }
