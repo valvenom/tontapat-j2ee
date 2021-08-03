@@ -31,6 +31,6 @@ public class TypeAbreuvoir implements Serializable {
 	private int id;
 	@Column(name = "nom")
 	private String nom;
-	@ManyToMany
+	@ManyToMany(mappedBy = "typesAbreuvoir")
 	private Set<Terrain> terrains;
 }
