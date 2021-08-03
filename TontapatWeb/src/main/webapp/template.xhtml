@@ -7,53 +7,53 @@
 
 <h:head>
 	<ui:insert name="head"></ui:insert>
-	<h:outputStylesheet library="css" name="style.css" />
+	<h:outputStylesheet library="css" name="style.css"/>
 </h:head>
 
 <h:body>
 	<b:navBar>
-	<div class="container">
-	<h:link class="navbar-brand">
-		<h:graphicImage library="images" name="logo.png" />
-		</h:link>
-		<b:navbarLinks>		
-			<b:navLink value="Offres" href="#"></b:navLink>
-			<b:navLink value="Annonces" href="#"></b:navLink>
-		</b:navbarLinks>
-		
-		<form class="navbar-form navbar-left hidden-md hidden-sm hidden-xs">
-			<div class="form-group">
-            <button class="search-button">
-                <b:iconAwesome  value="fal fa-search"></b:iconAwesome>
-                Rechercher une prestation
-            </button>
-        	</div>
-        	</form>
-		<!-- Following line is needed for TBS 3.0.1 (panel content overflow issue) -->
-		<b:navbarLinks pull="right">
-			<b:navLink value="" href="#"></b:navLink>
-		</b:navbarLinks>
-		<b:navbarLinks pull="right" styleClass="hidden-xs">
-			<b:navLink href="#">
-			<b:iconAwesome  value="fal fa-calendar" size="lg"></b:iconAwesome>
-			</b:navLink>
-			<b:navLink href="#">
-			<b:iconAwesome value="fal fa-bell" size="lg"></b:iconAwesome>
-			</b:navLink>
-			<b:navLink href="#">
-			<b:iconAwesome value="fal fa-comment" size="lg"></b:iconAwesome>
-			</b:navLink>
-			
-			<b:dropMenu value="Dropdown">
-				<b:navLink value="Action" href="#"></b:navLink>
-				<b:navLink value="Another action" href="#"></b:navLink>
-				<b:navLink value="Something else here" href="#"></b:navLink>
-				<b:navLink></b:navLink>
-				<b:navLink header="Nav header"></b:navLink>
-				<b:navLink value="Separated link" href="#"></b:navLink>
-				<b:navLink value="One more separated link" href="#"></b:navLink>
-			</b:dropMenu>
-		</b:navbarLinks>
+		<div class="container">
+			<h:link class="navbar-brand">
+				<h:graphicImage library="images" name="logo.png" />
+			</h:link>
+			<b:navbarLinks>
+				<b:navLink value="Offres" href="#"></b:navLink>
+				<b:navLink value="Annonces" href="#"></b:navLink>
+			</b:navbarLinks>
+
+			<form class="navbar-form navbar-left hidden-md hidden-sm hidden-xs">
+				<div class="form-group">
+					<button class="search-button">
+						<b:iconAwesome value="fal fa-search"></b:iconAwesome>
+						Rechercher une prestation
+					</button>
+				</div>
+			</form>
+			<!-- Following line is needed for TBS 3.0.1 (panel content overflow issue) -->
+			<b:navbarLinks pull="right">
+				<b:navLink value="" href="#"></b:navLink>
+			</b:navbarLinks>
+			<b:navbarLinks pull="right" styleClass="hidden-xs">
+				<b:navLink href="#">
+					<b:iconAwesome value="fal fa-calendar" size="lg"></b:iconAwesome>
+				</b:navLink>
+				<b:navLink href="#">
+					<b:iconAwesome value="fal fa-bell" size="lg"></b:iconAwesome>
+				</b:navLink>
+				<b:navLink href="#">
+					<b:iconAwesome value="fal fa-comment" size="lg"></b:iconAwesome>
+				</b:navLink>
+
+				<b:dropMenu value="Dropdown">
+					<b:navLink value="Action" href="#"></b:navLink>
+					<b:navLink value="Another action" href="#"></b:navLink>
+					<b:navLink value="Something else here" href="#"></b:navLink>
+					<b:navLink></b:navLink>
+					<b:navLink header="Nav header"></b:navLink>
+					<b:navLink value="Separated link" href="#"></b:navLink>
+					<b:navLink value="One more separated link" href="#"></b:navLink>
+				</b:dropMenu>
+			</b:navbarLinks>
 		</div>
 	</b:navBar>
 
@@ -61,9 +61,10 @@
 		<h1>My Website</h1>
 		<!--  
 		<h:graphicImage library="images" name="logo.png" />
+				<ui:insert name="content"></ui:insert>		
 		-->
-		<ui:insert name="">some content in other xhtml file</ui:insert>
+		<ui:include src="modal_offre.xhtml" />
 	</div>
-
+	
 </h:body>
 </html>
