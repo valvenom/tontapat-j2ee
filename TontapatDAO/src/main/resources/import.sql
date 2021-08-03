@@ -84,5 +84,6 @@ INSERT INTO `motif_reclamation` (nom) VALUES ('mauvais traitement des animaux');
 INSERT INTO `motif_reclamation` (nom) VALUES ('non conformité du terrain');
 INSERT INTO `motif_reclamation` (nom) VALUES ('non respect des actions de suivie');
 
+INSERT INTO `annonce` (nom) VALUES ('non respect des actions de suivie');
 
 
