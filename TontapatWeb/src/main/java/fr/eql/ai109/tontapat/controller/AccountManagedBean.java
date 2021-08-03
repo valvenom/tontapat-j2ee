@@ -11,9 +11,13 @@ import javax.servlet.http.HttpSession;
 
 import fr.eql.ai109.tontapat.entity.Utilisateur;
 import fr.eql.ai109.tontapat.ibusiness.AccountIBusiness;
+import lombok.Getter;
+import lombok.Setter;
 
 @ManagedBean(name = "mbAccount")
 @SessionScoped
+@Getter
+@Setter
 public class AccountManagedBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -53,24 +57,5 @@ public class AccountManagedBean implements Serializable {
 		password = "";
 		utilisateur = new Utilisateur();
 		return "/email.xhtml?faces-redirection=true";
-	}
-
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public Utilisateur getUtilisateur() {
-		return utilisateur;
-	}
-	public void setUtilisateur(Utilisateur utilisateur) {
-		this.utilisateur = utilisateur;
 	}
 }

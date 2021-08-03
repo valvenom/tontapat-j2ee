@@ -11,7 +11,7 @@ import fr.eql.ai109.tontapat.ibusiness.PrestationIBusiness;
 import lombok.Getter;
 import lombok.Setter;
 
-@ManagedBean(name = "mbAccount")
+@ManagedBean(name = "mbPrestation")
 @SessionScoped
 @Getter
 @Setter
