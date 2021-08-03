@@ -10,11 +10,16 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Table(name = "proposition")
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Setter
 @Getter
 public class Proposition implements Serializable {

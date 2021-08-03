@@ -14,11 +14,16 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Table(name = "utilisateur")
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Setter
 @Getter
 public class Utilisateur implements Serializable {
@@ -30,7 +35,7 @@ public class Utilisateur implements Serializable {
 	@Column(name = "id_utilisateur", nullable = false)
 	private int id;
 	@Column(name = "email")
-	private String email;
+	@Getter @Setter private String email;
 	@Column(name = "mot_de_passe")
 	private String motDePasse;
 	@Column(name = "date_naissance")
