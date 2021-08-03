@@ -2,7 +2,6 @@ package fr.eql.ai109.tontapat.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,11 +11,16 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Table(name = "annonce")
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Setter
 @Getter
 public class Annonce implements Serializable {
@@ -44,7 +48,6 @@ public class Annonce implements Serializable {
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "id_terrain")
 	private Terrain terrain;
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id_prestation", referencedColumnName = "id_prestation")
+	@OneToOne(mappedBy = "annonce")
 	private Prestation prestation;
 }

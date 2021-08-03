@@ -16,13 +16,18 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Table(name = "terrain")
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Setter
-@Getter
+@Getter 
 public class Terrain implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -54,12 +59,13 @@ public class Terrain implements Serializable {
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "id_utilisateur")
 	private Utilisateur utilisateur;
-	@ManyToMany
-	@JoinTable(
-			name = "terrain_morphologie",
-			joinColumns = @JoinColumn(name = "id_terrain"),
-			inverseJoinColumns = @JoinColumn(name = "id_morphologie"))
-	Set<Morphologie> morphologies;
+//	@ManyToMany
+//	@JoinTable(
+//			name = "terrain_morphologie",
+//			joinColumns = @JoinColumn(name = "id_terrain"),
+//			inverseJoinColumns = @JoinColumn(name = "id_morphologie"))
+	@OneToMany(mappedBy = "terrain")
+	Set<TerrainMorphologie> terrainMorphologies;
 	@ManyToMany
 	@JoinTable(
 			name = "terrain_type_vegetation",

@@ -9,11 +9,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Table(name = "type_abreuvoir")
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Setter
 @Getter
 public class TypeAbreuvoir implements Serializable {
@@ -26,6 +31,6 @@ public class TypeAbreuvoir implements Serializable {
 	private int id;
 	@Column(name = "nom")
 	private String nom;
-	@ManyToMany
+	@ManyToMany(mappedBy = "typesAbreuvoir")
 	private Set<Terrain> terrains;
 }
