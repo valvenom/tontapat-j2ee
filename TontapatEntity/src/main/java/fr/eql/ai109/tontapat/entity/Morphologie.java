@@ -32,8 +32,8 @@ public class Morphologie implements Serializable {
 	private int id;
 	@Column(name = "nom")
 	private String nom;
-	@OneToMany(mappedBy = "morphologies")
-	Set<Terrain> terrains;
-	@ManyToMany(mappedBy = "especes")
+	@OneToMany(mappedBy = "morphologie")
+	Set<TerrainMorphologie> terrainsMorphologie;
+	@ManyToMany(mappedBy = "morphologies")
 	Set<Espece> especes;
 }

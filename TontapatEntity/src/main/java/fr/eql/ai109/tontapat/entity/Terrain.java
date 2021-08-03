@@ -65,7 +65,7 @@ public class Terrain implements Serializable {
 //			joinColumns = @JoinColumn(name = "id_terrain"),
 //			inverseJoinColumns = @JoinColumn(name = "id_morphologie"))
 	@OneToMany(mappedBy = "terrain")
-	Set<Morphologie> morphologies;
+	Set<TerrainMorphologie> terrainMorphologies;
 	@ManyToMany
 	@JoinTable(
 			name = "terrain_type_vegetation",
