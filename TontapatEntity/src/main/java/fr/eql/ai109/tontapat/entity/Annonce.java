@@ -49,7 +49,6 @@ public class Annonce implements Serializable {
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "id_terrain")
 	private Terrain terrain;
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id_prestation", referencedColumnName = "id_prestation")
-	private Prestation prestation;
+	@OneToOne(mappedBy = "prestation")
+	private Annonce annonce;
 }
