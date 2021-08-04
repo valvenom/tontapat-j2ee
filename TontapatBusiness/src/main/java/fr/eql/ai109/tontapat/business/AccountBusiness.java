@@ -14,7 +14,7 @@ import fr.eql.ai109.tontapat.idao.UtilisateurIDAO;
 @Stateless
 public class AccountBusiness implements AccountIBusiness {
 
-	@EJB
+	//@EJB
 	private UtilisateurIDAO utilisateurIDAO;
 	
 	public Utilisateur connection(String email, String password) {

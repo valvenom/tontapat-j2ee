@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-                                            
+                                                
+    
     
     
     
@@ -10,7 +11,8 @@
     
     
     <wb-module deploy-name="TontapatWeb-1.0.0">
-                                                                                        
+                                                                                                
+        
         
         
         
@@ -21,7 +23,8 @@
         
         
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-                                                                                        
+                                                                                                
+        
         
         
         
@@ -32,7 +35,8 @@
         
         
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-                                                                                        
+                                                                                                
+        
         
         
         
@@ -43,70 +47,24 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-                        
+                                
+        
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-                                                                                
-        
-        
-        
-        
-        
-        
-        
-        
         <dependent-module archiveName="TontapatEntity-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/TontapatEntity/TontapatEntity">
-                                                                                                                        
-            
-            
-            
-            
-            
-            
-            
-            
             <dependency-type>uses</dependency-type>
-                                                                                                                    
-        
-        
-        
-        
-        
-        
-        
-        
         </dependent-module>
-                                                                                
-        
-        
-        
-        
-        
-        
-        
-        
         <dependent-module archiveName="TontapatIBusiness-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/TontapatIBusiness/TontapatIBusiness">
-                                                                                                                        
-            
-            
-            
-            
-            
-            
-            
-            
             <dependency-type>uses</dependency-type>
-                                                                                                                    
-        
-        
-        
-        
-        
-        
-        
-        
         </dependent-module>
-                                                                                        
+        <dependent-module archiveName="TontapatBusiness-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/TontapatBusiness/TontapatBusiness">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="TontapatIDAO-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/TontapatIDAO/TontapatIDAO">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+                                                                                                
+        
         
         
         
@@ -117,7 +75,8 @@
         
         
         <property name="context-root" value="TontapatWeb"/>
-                                                                                        
+                                                                                                
+        
         
         
         
@@ -128,7 +87,8 @@
         
         
         <property name="java-output-path" value="/TontapatWeb/target/classes"/>
-                                                                                    
+                                                                                            
+    
     
     
     
@@ -139,7 +99,8 @@
     
     
     </wb-module>
-                                        
+                                            
+
 
 
 
