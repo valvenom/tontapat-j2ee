@@ -11,4 +11,4 @@ public interface AnnonceIBusiness {
 	Annonce update(Annonce annonce);
 	Annonce remove(Annonce annonce);
 	List<Annonce> search(AnnonceSearch annonceSearch);
-}
+} 

@@ -1,38 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+<<<<<<< HEAD
                             
     
     
     
+=======
+                
+>>>>>>> refs/heads/dev-val
     
     
     <wb-module deploy-name="TontapatBusiness">
+<<<<<<< HEAD
                                                         
         
         
         
+=======
+                                
+>>>>>>> refs/heads/dev-val
         
         
         <wb-resource deploy-path="/" source-path="/src/main/java"/>
                 
         <wb-resource deploy-path="/" source-path="/src/main/resources" tag="defaultRootSource"/>
+<<<<<<< HEAD
                                                         
         
         
         
+=======
+                                
+>>>>>>> refs/heads/dev-val
         
         
         <property name="java-output-path" value="/TontapatBusiness/target/classes"/>
+<<<<<<< HEAD
                                                     
     
     
     
+=======
+                            
+>>>>>>> refs/heads/dev-val
     
     
     </wb-module>
+<<<<<<< HEAD
                         
 
 
 
+=======
+            
+>>>>>>> refs/heads/dev-val
 
 
 </project-modules>

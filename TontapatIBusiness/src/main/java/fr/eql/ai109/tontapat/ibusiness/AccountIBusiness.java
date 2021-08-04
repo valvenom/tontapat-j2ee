@@ -5,7 +5,11 @@ import java.util.List;
 import fr.eql.ai109.tontapat.entity.Utilisateur;
 
 public interface AccountIBusiness {
-	Utilisateur connection(String email, String password);
+	
+	Utilisateur connection(String login, String password);
 	List<Utilisateur> findAll();
-	Utilisateur signup(Utilisateur utilisateur);
+	Utilisateur add();
+	Utilisateur getById(int id);
+	Utilisateur update(Utilisateur utilisateur);
+	Utilisateur remove(Utilisateur utilisateur);
 }
