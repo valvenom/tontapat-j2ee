@@ -7,7 +7,6 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 
 import fr.eql.ai109.tontapat.entity.Utilisateur;
 import fr.eql.ai109.tontapat.idao.UtilisateurIDAO;
@@ -26,7 +25,7 @@ public class UtilisateurDAO extends GenericDAO<Utilisateur> implements Utilisate
 
 			em = new EntityManagerHolder().getCurrentEntityManager();
 			
-			Query query = em.createQuery("SELECT u FROM User u WHERE u.email=:emailParam");
+			Query query = em.createQuery("SELECT u FROM Utilisateur u WHERE u.email=:emailParam");
 			query.setParameter("emailParam", utilisateur.getEmail());
 			System.out.println(query);
 			users = query.getResultList();
