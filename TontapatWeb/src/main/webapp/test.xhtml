@@ -63,7 +63,10 @@
 		<h:graphicImage library="images" name="logo.png" />
 		-->
 		<ui:insert name="">
-<ui:repeat var="#{}" value=""></ui:repeat>
+			<ui:repeat var="offre" value="#{mbOffre.getAll()}">
+			<br />
+			<h:outputLabel value="#{mbOffre.nom}" />
+			</ui:repeat>
 		</ui:insert>
 	</div>
 
