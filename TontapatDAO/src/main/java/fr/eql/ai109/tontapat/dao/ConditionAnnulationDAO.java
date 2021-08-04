@@ -8,6 +8,8 @@ import javax.persistence.EntityTransaction;
 import fr.eql.ai109.tontapat.entity.ConditionAnnulation;
 import fr.eql.ai109.tontapat.idao.ConditionAnnulationIDAO;
 
+
+
 @Remote(ConditionAnnulationIDAO.class)
 @Stateless
 public class ConditionAnnulationDAO extends GenericDAO<ConditionAnnulation> implements ConditionAnnulationIDAO {

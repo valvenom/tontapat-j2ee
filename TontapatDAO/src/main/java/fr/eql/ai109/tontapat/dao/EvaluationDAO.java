@@ -11,13 +11,13 @@ import fr.eql.ai109.tontapat.entity.Evaluation;
 import fr.eql.ai109.tontapat.entity.Utilisateur;
 import fr.eql.ai109.tontapat.idao.EvaluationIDAO;
 
+
 @Remote(EvaluationIDAO.class)
 @Stateless
 public class EvaluationDAO extends GenericDAO<Evaluation> implements EvaluationIDAO {
 	
 	EntityManager em = null;
 	EntityTransaction tx = null;
-	
 	@Override
 	public List<Evaluation> getEvaluationsDoneByUtilisateur(Utilisateur utilisateur) {
 		// TODO Auto-generated method stub
@@ -28,5 +28,7 @@ public class EvaluationDAO extends GenericDAO<Evaluation> implements EvaluationI
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+
 	
 }
