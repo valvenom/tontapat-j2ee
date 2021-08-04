@@ -11,7 +11,6 @@ import fr.eql.ai109.tontapat.ibusiness.AccountIBusiness;
 import fr.eql.ai109.tontapat.idao.UtilisateurIDAO;
 
 @Remote(AccountIBusiness.class)
-@Stateless
 public class AccountBusiness implements AccountIBusiness {
 
 	//@EJB
